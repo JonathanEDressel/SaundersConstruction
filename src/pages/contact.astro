@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - Sanders Construction">
+	<main>
+		<section class="hero">
+			<h1>Contact Us</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</section>
+
+		<div class="contact-container">
+			<section class="contact-form">
+				<h2>Request a Quote</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+					tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+				
+				<form>
+					<div class="form-group">
+						<label for="name">Name *</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email *</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input type="tel" id="phone" name="phone" />
+					</div>
+
+					<div class="form-group">
+						<label for="service">Service Type *</label>
+						<select id="service" name="service" required>
+							<option value="">Select a service</option>
+							<option value="residential">Residential Construction</option>
+							<option value="commercial">Commercial Construction</option>
+							<option value="renovation">Renovation & Remodeling</option>
+							<option value="custom">Custom Home Building</option>
+							<option value="additions">Additions & Extensions</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Project Details *</label>
+						<textarea id="message" name="message" rows="6" required></textarea>
+					</div>
+
+					<button type="submit" class="submit-button">Submit Request</button>
+				</form>
+			</section>
+
+			<aside class="contact-info">
+				<h2>Get In Touch</h2>
+				
+				<div class="info-block">
+					<h3>Address</h3>
+					<p>
+						Lorem Ipsum Street<br>
+						Dolor Sit, Amet 12345<br>
+						United States
+					</p>
+				</div>
+
+				<div class="info-block">
+					<h3>Phone</h3>
+					<p>(555) 123-4567</p>
+				</div>
+
+				<div class="info-block">
+					<h3>Email</h3>
+					<p>info@sandersconstruction.com</p>
+				</div>
+
+				<div class="info-block">
+					<h3>Business Hours</h3>
+					<p>
+						Monday - Friday: 8:00 AM - 6:00 PM<br>
+						Saturday: 9:00 AM - 4:00 PM<br>
+						Sunday: Closed
+					</p>
+				</div>
+
+				<div class="info-block">
+					<h3>Service Area</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+			</aside>
+		</div>
+
+		<section class="map">
+			<h2>Service Area Map</h2>
+			<div class="map-placeholder">
+				<p>[ Map Placeholder - Lorem ipsum dolor sit amet ]</p>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 3rem 0;
+		margin-bottom: 3rem;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.contact-container {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		margin-bottom: 4rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+		color: #333;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+
+	.contact-form p {
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	label {
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+		color: #333;
+	}
+
+	input,
+	select,
+	textarea {
+		padding: 0.75rem;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		font-size: 1rem;
+		font-family: inherit;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		outline: none;
+		border-color: #333;
+	}
+
+	.submit-button {
+		padding: 1rem 2rem;
+		background-color: #333;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.3s;
+	}
+
+	.submit-button:hover {
+		background-color: #555;
+	}
+
+	.contact-info {
+		background-color: #f9f9f9;
+		padding: 2rem;
+		border-radius: 8px;
+	}
+
+	.info-block {
+		margin-bottom: 2rem;
+	}
+
+	.info-block p {
+		line-height: 1.6;
+	}
+
+	.map {
+		margin-top: 3rem;
+	}
+
+	.map-placeholder {
+		width: 100%;
+		height: 400px;
+		background-color: #e0e0e0;
+		border: 2px dashed #999;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+
+	.map-placeholder p {
+		font-size: 1.2rem;
+		color: #666;
+	}
+
+	@media (max-width: 768px) {
+		.contact-container {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
