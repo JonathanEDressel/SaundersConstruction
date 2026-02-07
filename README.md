@@ -41,6 +41,15 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🏗 Website Structure
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Core Pages
+* **Home (`/`)**: Hero section, service highlights, and primary Call to Action (CTA).
+* **About (`/about`)**: Company history, licensing, insurance info, and team bios.
+* **Services (`/services`)**: Detailed breakdown of offerings (e.g., Residential, Commercial, Renovation).
+* **Contact (`/contact`)**: Quote request form and service area map.
+
+### Portfolio (Content Collections)
+The portfolio is managed via **Content Collections** located in `src/content/projects/`. This allows for easy management of project galleries using Markdown or JSON.
+* **Project Gallery (`/projects`)**: A grid view of completed works.
+* **Project Details (`/projects/[slug]`)**: Individual pages for deep dives into specific builds, featuring "Before & After" imagery.
